@@ -17,3 +17,6 @@ class Task(models.Model):
         User, on_delete=models.CASCADE, related_name='tasks')
     created_by = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='created_tasks', default=1)
+
+    def __str__(self):
+        return self.title
