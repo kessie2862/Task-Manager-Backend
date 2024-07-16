@@ -57,3 +57,9 @@ def login(request):
             return JsonResponse({'error': 'Unable to login. Check username and password.'}, status=400)
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+
+class UserListView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
