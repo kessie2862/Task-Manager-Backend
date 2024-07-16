@@ -103,3 +103,14 @@ class TaskSummaryView(APIView):
             status='in_progress').count()
         overdue_created_tasks = created_tasks.filter(
             due_date__lt=timezone.now(), status__in=['open', 'in_progress']).count()
+
+        # Tasks assigned
+        assigned_tasks = Task.objects.filter(assigned_user=user)
+
+        total_assigned_tasks = assigned_tasks.count()
+        completed_assigned_tasks = assigned_tasks.filter(
+            status='completed').count()
+        in_progress_assigned_tasks = assigned_tasks.filter(
+            status='in_progress').count()
+        overdue_assigned_tasks = assigned_tasks.filter(
+            due_date__lt=timezone.now(), status__in=['open', 'in_progress']).count()
