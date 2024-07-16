@@ -13,3 +13,7 @@ class Task(models.Model):
         ('in_progress', 'In Progress'),
         ('completed', 'Completed')
     ])
+    assigned_user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='tasks')
+    created_by = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='created_tasks', default=1)
