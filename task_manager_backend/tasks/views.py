@@ -89,3 +89,17 @@ class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 class TaskSummaryView(APIView):
     permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+
+        # Tasks created by the user
+        created_tasks = Task.objects.filter(created_by=user)
+
+        total_created_tasks = created_tasks.count()
+        completed_created_tasks = created_tasks.filter(
+            status='completed').count()
+        in_progress_created_tasks = created_tasks.filter(
+            status='in_progress').count()
+        overdue_created_tasks = created_tasks.filter(
+            due_date__lt=timezone.now(), status__in=['open', 'in_progress']).count()
