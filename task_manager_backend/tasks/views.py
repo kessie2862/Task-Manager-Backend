@@ -39,3 +39,21 @@ def signup(request):
             return JsonResponse({'error': str(e)}, status=400)
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+
+@csrf_exempt
+def login(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        username = data.get('username', '')
+        password = data.get('password', '')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            refresh = RefreshToken.for_user(user)
+            return JsonResponse({'refresh': str(refresh), 'access': str(refresh.access_token)}, status=200)
+        else:
+            return JsonResponse({'error': 'Unable to login. Check username and password.'}, status=400)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
