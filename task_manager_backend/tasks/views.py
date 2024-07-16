@@ -21,3 +21,13 @@ def signup(request):
             user = User.objects.create_user(
                 username=username, password=password, email=email)
             user.save()
+
+            refresh = RefreshToken.for_user(user)
+
+            return JsonResponse({'refresh': str(refresh), 'access': str(refresh.access_token)}, status=201)
+        except IntegrityError:
+            return JsonResponse({'error': 'Username taken. Choose another username.'}, status=400)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
