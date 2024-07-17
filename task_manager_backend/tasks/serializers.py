@@ -19,3 +19,9 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'due_date',
                   'status', 'assigned_user', 'assigned_user_id', 'created_by']
         read_only_fields = ['created_by']
+
+    def create(self, validated_data):
+        assigned_user = validated_data.pop('assigned_user')
+        task = Task.objects.create(
+            assigned_user=assigned_user, **validated_data)
+        return task
