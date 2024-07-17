@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-73axm1p+^=6m9dhr##sa%ob(%v*7fms0f_rjh$g!7(d2)9&$m_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'tasksapi.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
