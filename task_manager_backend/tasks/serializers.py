@@ -25,3 +25,15 @@ class TaskSerializer(serializers.ModelSerializer):
         task = Task.objects.create(
             assigned_user=assigned_user, **validated_data)
         return task
+
+    def update(self, instance, validated_data):
+        assigned_user = validated_data.pop('assigned_user', None)
+        instance.title = validated_data.get('title', instance.title)
+        instance.description = validated_data.get(
+            'description', instance.description)
+        instance.due_date = validated_data.get('due_date', instance.due_date)
+        instance.status = validated_data.get('status', instance.status)
+        if assigned_user:
+            instance.assigned_user = assigned_user
+        instance.save()
+        return instance
