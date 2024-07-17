@@ -73,9 +73,8 @@ To run this project you need:
 1. [Install Python](https://www.python.org/)
 2. [Install Django](https://www.djangoproject.com/)
 3. [Install pip](https://pypi.org/project/pip/)
-   ### Note: pip usually comes installed with Python. You can check using
-    ``` pip --version ```
-4. Ensure that you have Installed [Git](https://git-scm.com/)
+   #### Note: pip usually comes installed with Python. You can check using   ``` pip --version ```
+4. Ensure that you have [Git](https://git-scm.com/) installed.
 
   
  ```
@@ -90,10 +89,11 @@ https://github.com/kessie2862/Task-Manager-Backend.git
 cd Task-Manager-Backend
 ```
 ### In your settings.py, make sure,
-  Development - DEBUG = True 
+  Development - DEBUG = True
+  
   NOTE: Debug must be changed to false in Production
 
-### Install
+## Install
 
 Install this project with:
 
