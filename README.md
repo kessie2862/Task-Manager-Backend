@@ -1,6 +1,4 @@
-
-
-> # Task-Manager-Backend                                                                                             
+# Task-Manager-Backend
 
 <a name="readme-top"></a>
 
@@ -13,9 +11,10 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+- [🔗 Frontend Link](#frontend-link)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
 - [👥 Authors](#authors)
@@ -27,19 +26,21 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Task-Manager-Backend] <a name="about-project"></a>
+# 📖 Task-Manager-Backend <a name="about-project"></a>
 
- **[Task-Manager-Backend]** This is the backend API component of the Task Manager project, allowing users to manage their tasks effortlessly and boost productivity.
+**Task-Manager-Backend** is the backend API component of the Task Manager project, allowing users to manage their tasks effortlessly and boost productivity.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
+  <summary>Backend</summary>
   <ul>
     <li>Python</li>
     <li>Django</li>
-    <li>Sqlite</li>
+    <li>Django REST framework</li>
+    <li>SQLite</li>
   </ul>
 </details>
 
@@ -47,83 +48,75 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Provide server-side validations**
-- **Provide Api endpoints**
+- **Server-side validations**
+- **API endpoints**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[liveDemo](Not yet available)
 
-
-> ## 🔗 Frontend Link <a name="documentation"></a>
-  > _The [Grandeur-Frontend](https://github.com/Elerqsousy/grandeur-frontend) is built using React and Redux and is hosted on a separate repository. The front end handles the user interface and integrates with this backend API to retrieve and display data. To access our frontend repository, please click [here](https://github.com/Elerqsousy/grandeur-frontend)._
+[Live Demo](#) (Not yet available)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Getting Started
+## 🔗 Frontend Link <a name="frontend-link"></a>
+
+The [Task-Manager-Frontend](https://github.com/kessie2862/Task-Manager-Frontend) is built using React and Redux and is hosted on a separate repository. The frontend handles the user interface and integrates with this backend API to retrieve and display data.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
-To run this project you need:
-  * A basic understanding of Python, Django, and Git
-  * An Sqlite connection
-### Usage
+### Prerequisites <a name="prerequisites"></a>
+
+To run this project, you need:
+
+- A basic understanding of Python, Django, and Git
+- SQLite
+
+### Setup <a name="setup"></a>
+
 1. [Install Python](https://www.python.org/)
 2. [Install Django](https://www.djangoproject.com/)
 3. [Install pip](https://pypi.org/project/pip/)
-   #### Note: pip usually comes installed with Python. You can check using   ``` pip --version ```
+   - Note: pip usually comes installed with Python. You can check using `pip --version`
 4. Ensure that you have [Git](https://git-scm.com/) installed.
 
-  
- ```
-    python >= 3.10.0
-    Django==5.0.7
-    pip
+```plaintext
+python >= 3.10.0
+Django==5.0.7
+pip
 ```
+Install <a name="install"></a>
 
-  3. Clone this repo
+  3. Clone this repository
 ```bash
 https://github.com/kessie2862/Task-Manager-Backend.git
 cd Task-Manager-Backend
 ```
-### In your settings.py, make sure,
-  Development - DEBUG = True
-  
-  NOTE: Debug must be changed to false in Production
 
-## Install
-
-Install this project with:
-
-```bash
-  cd Task-Manager-Backend
-  bundle install
-```
-Install Virtual Environment
-
-``````
-pip install virtualenv
-
-``````
- 
 Set Up your Virtual Environment
 
-``````
+``````bash
+pip install virtualenv
 python -m venv venv
 
 ``````
 
 Activate the virtual environment.
 
-``````
-windows: venv\Scripts\activate
-On macOS/Linux: source venv/bin/activate
+``````bash
+# On Windows
+venv\Scripts\activate
+
+# On macOS/Linux
+source venv/bin/activate
 
 ``````
 
-Install Dependencies
+Install the required dependencies
 
 ```
   pip install -r requirements.txt
@@ -143,7 +136,7 @@ Create a Superuser (Optional)
  python manage.py createsuperuser
 
 ```
-
+Usage <a name="usage"></a>
 Run the Development Server
 
 ```
