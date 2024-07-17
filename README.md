@@ -68,7 +68,7 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 To run this project you need:
   * A basic understanding of Python, Django, and Git
-  * A Sqlite connection
+  * An Sqlite connection
 ### Usage
 1. [Install Python](https://www.python.org/)
 2. [Install Django](https://www.djangoproject.com/)
