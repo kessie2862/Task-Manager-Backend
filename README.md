@@ -28,7 +28,7 @@
 
 # 📖 Task-Manager-Backend <a name="about-project"></a>
 
-**Task-Manager-Backend** is the backend API component of the Task Manager project, allowing users to manage their tasks effortlessly and boost productivity.
+> **Task-Manager-Backend** is the backend API component of the Task Manager project, allowing users to manage their tasks effortlessly and boost productivity.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -61,7 +61,7 @@
 
 ## 🔗 Frontend Link <a name="frontend-link"></a>
 
-The [Task-Manager-Frontend](https://github.com/kessie2862/Task-Manager-Frontend) is built using React and is hosted on a separate repository. The frontend handles the user interface and integrates with this backend API to create and manage tasks.
+> The [Task-Manager-Frontend](https://github.com/kessie2862/Task-Manager-Frontend) is built using React and is hosted on a separate repository. The frontend handles the user interface and integrates with this backend API to create and manage tasks.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
