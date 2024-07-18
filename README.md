@@ -74,7 +74,7 @@ To get a local copy up and running, follow these steps.
 To run this project, you need:
 
 - A basic understanding of Python, Django, Django REST framework, how to test APIs using Postman(or other tools) and Git.
-- SQLite
+
 
 ### Setup <a name="setup"></a>
 
