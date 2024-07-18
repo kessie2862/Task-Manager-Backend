@@ -71,9 +71,12 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites <a name="prerequisites"></a>
 
-To run this project, you need:
+In order to run this project you need:
 
 - A basic understanding of Python, Django, Django REST framework, how to test APIs using Postman(or other tools) and Git.
+- python >= 3.10.0
+- Django==5.0.7
+- pip
 
 
 ### Setup <a name="setup"></a>
@@ -84,14 +87,10 @@ To run this project, you need:
    - Note: pip usually comes installed with Python. You can check using `pip --version`
 4. Ensure that you have [Git](https://git-scm.com/) installed.
 
-```plaintext
-python >= 3.10.0
-Django==5.0.7
-pip
-```
-Install <a name="install"></a>
 
-  3. Clone this repository
+### Install <a name="install"></a>
+
+Clone this repository
 ```bash
 https://github.com/kessie2862/Task-Manager-Backend.git
 cd Task-Manager-Backend
@@ -144,6 +143,7 @@ Run the Development Server
  python manage.py runserver
 
 ```
+- The server will be started on [localhost:8000](http://127.0.0.1:8000/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
