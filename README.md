@@ -73,7 +73,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- A basic understanding of Python, Django, Django REST framework, how to test APIs using Postman(or other tools) and Git.
+- A basic understanding of Python, Django, and Django REST framework, as well as how to test APIs using Postman(or other tools), a code editor(VS Code recommended), and Git.
 - python >= 3.10.0
 - Django==5.0.7
 - pip
