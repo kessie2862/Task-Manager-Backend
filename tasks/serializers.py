@@ -17,7 +17,7 @@ class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = ['id', 'title', 'description', 'due_date',
-                  'status', 'assigned_user', 'assigned_user_id', 'created_by']
+                  'status', 'priority', 'assigned_user', 'assigned_user_id', 'created_by']
         read_only_fields = ['created_by']
 
     def create(self, validated_data):
@@ -33,6 +33,7 @@ class TaskSerializer(serializers.ModelSerializer):
             'description', instance.description)
         instance.due_date = validated_data.get('due_date', instance.due_date)
         instance.status = validated_data.get('status', instance.status)
+        instance.priority = validated_data.get('priority', instance.priority)
         if assigned_user:
             instance.assigned_user = assigned_user
         instance.save()
