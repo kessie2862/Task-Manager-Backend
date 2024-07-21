@@ -71,9 +71,9 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites <a name="prerequisites"></a>
 
-In order to run this project you need:
+To run this project you need:
 
-- A basic understanding of Python, Django, and Django REST framework, as well as how to test APIs using Postman(or other tools), a code editor(VS Code recommended), and Git.
+- A basic understanding of Git and a code editor(VS Code recommended).
 - python >= 3.10.0
 - Django==5.0.7
 - pip
